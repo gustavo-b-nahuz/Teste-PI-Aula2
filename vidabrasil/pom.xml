@@ -25,6 +25,16 @@
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+    <groupId>org.apache.commons</groupId>
+    <artifactId>commons-csv</artifactId>
+    <version>1.9.0</version>
+</dependency>
+<dependency>
+    <groupId>com.github.lalyos</groupId>
+    <artifactId>jfiglet</artifactId>
+    <version>0.0.8</version>
+</dependency>
   </dependencies>
 
   <build>
@@ -71,5 +81,57 @@
         </plugin>
       </plugins>
     </pluginManagement>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>single</goal>
+            </goals>
+            <configuration>
+              <archive>
+                <manifest>
+                  <mainClass>
+                    gustavo.App
+                  </mainClass>
+                </manifest>
+              </archive>
+              <descriptorRefs>
+                <descriptorRef>jar-with-dependencies</descriptorRef>
+              </descriptorRefs>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>single</goal>
+            </goals>
+            <configuration>
+              <archive>
+                <manifest>
+                  <mainClass>
+                    ******************** nome da sua classe principal *****()
+                  </mainClass>
+                </manifest>
+              </archive>
+              <descriptorRefs>
+                <descriptorRef>jar-with-dependencies</descriptorRef>
+              </descriptorRefs>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+</plugins>
+</plugins>
   </build>
 </project>
